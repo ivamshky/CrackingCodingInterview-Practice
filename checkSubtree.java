@@ -52,10 +52,15 @@ class checkSubtree{
         Tree T2 = new Tree();
         T2.root = Tree.createTree(new int[]{4,5,6});
         boolean isSubtree = T1.containsTree(T1.root, T2.root);
-
+        Tree T3 = new Tree();
+        T3.root = Tree.createTree(new int[] {1,5,6});
         if(isSubtree)
             System.out.println("T2 is a Subtree of T1");
         else
             System.out.println("T2 is not a Subtree of T1");
+        if(T1.containsTree(T1.root, T3.root))
+            System.out.println("T3 is a Subtree of T1");
+        else
+            System.out.println("T3 is not a Subtree of T1");
     }
 }
